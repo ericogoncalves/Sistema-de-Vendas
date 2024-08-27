@@ -1,0 +1,94 @@
+﻿/* Body Padding */
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Wrapping Element */
+.body-content {
+    background-color: #e6ffe6; /* Verde claro */
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Page Header */
+.page-header {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ccc;
+}
+
+    .page-header h2 {
+        font-size: 2em;
+        color: #333;
+        margin: 0;
+        text-align: center;
+    }
+
+/* Responsive Table */
+.table-responsive {
+    overflow-x: auto;
+}
+
+/* Table Styles */
+.table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+    .table th, .table td {
+        text-align: left;
+        padding: 8px;
+    }
+
+.table-striped tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table-bordered {
+    border: 1px solid #ddd;
+}
+
+    .table-bordered th, .table-bordered td {
+        border: 1px solid #ddd;
+    }
+
+/* Small Button Sizes */
+.btn-sm {
+    padding: 5px 10px;
+    font-size: 12px;
+}
+/* Responsividade da Tabela */
+.table-responsive {
+    overflow-x: auto;
+    margin-top: 1px;
+}
+
+/* Estilos adicionais para tornar a tabela mais visualmente agradável */
+.table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+    .table th, .table td {
+        text-align: left;
+        padding: 8px;
+    }
+
+.table-striped tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table-bordered {
+    border: 1px solid #ddd;
+}
+
+    .table-bordered th, .table-bordered td {
+        border: 1px solid #ddd;
+    }
+
+/* Ajuste dos botões para tamanhos pequenos */
+.btn-sm {
+    padding: 5px 10px;
+    font-size: 12px;
+}

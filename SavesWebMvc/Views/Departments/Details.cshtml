@@ -1,0 +1,26 @@
+﻿@model salesWebMvc.Models.Department
+
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+<div class="body-content">
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Departamento</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-default">Editar</a>
+    <a asp-action="Index" class="btn btn-primary">Voltar à lista</a>
+</div>
+</div>

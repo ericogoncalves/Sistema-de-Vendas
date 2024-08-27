@@ -1,0 +1,43 @@
+﻿@model IEnumerable<SalesWebMvc.Models.Produto>
+
+@{
+    ViewData["Title"] = "Produtos";
+}
+
+<div class="container body-content">
+    <div class="page-header">
+        <h2 class="text-center">@ViewData["Title"]</h2>
+    </div>
+
+    <p>
+        <a asp-action="Create" class="btn btn-primary">Novo Produto</a>
+    </p>
+
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Preço</th>
+                    <th>Departamento</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Nome</td>
+                        <td>@item.Preço.ToString("C", new System.Globalization.CultureInfo("pt-BR"))</td>
+                        <td>@item.Departamento.Name</td>
+                        <td>
+                            <a asp-action="Details" asp-route-id="@item.ProdutoId" class="btn btn-info btn-sm">Detalhes</a>
+                            <a asp-action="Edit" asp-route-id="@item.ProdutoId" class="btn btn-warning btn-sm">Editar</a>
+                            <a asp-action="Delete" asp-route-id="@item.ProdutoId" class="btn btn-danger btn-sm">Excluir</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+﻿@model SalesWebMvc.Models.Venda
+
+@{
+    ViewData["Title"] = "Detalhes da Venda";
+}
+
+<div class="body-content">
+    <h2>Detalhes da Venda</h2>
+
+    <div>
+        <h4>Venda</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>Valor</dt>
+            <dd>@Model.Valor.ToString("C", new System.Globalization.CultureInfo("pt-BR"))</dd>
+            <dt>Data</dt>
+            <dd>@Model.Data.ToShortDateString()</dd>
+            <dt>Produto</dt>
+            <dd>@Model.Produto.Nome</dd>
+            <dt>Vendedor</dt>
+            <dd>@Model.Vendedor.Name</dd>
+            <dt>Departamento</dt>
+            <dd>@Model.Departamento.Name</dd>
+            <dt>Status</dt>
+            <dd>@Model.Status.ToString()</dd>
+        </dl>
+        <p>
+            <a asp-action="Edit" asp-route-id="@Model.VendaId" class="btn btn-warning">Editar</a>
+            <a asp-action="Index" class="btn btn-primary">Voltar</a>
+        </p>
+    </div>
+</div>

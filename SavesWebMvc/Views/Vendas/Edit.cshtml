@@ -1,0 +1,51 @@
+﻿@model SalesWebMvc.Models.Venda
+
+@{
+    ViewData["Title"] = "Editar Venda";
+}
+
+<div class="body-content">
+    <h2>Editar Venda</h2>
+
+    <h4>Venda</h4>
+    <hr />
+    <form asp-action="Edit">
+        <input type="hidden" asp-for="VendaId" />
+        <div class="form-group">
+            <label asp-for="Valor" class="control-label"></label>
+            <input asp-for="Valor" class="form-control" />
+            <span asp-validation-for="Valor" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Data" class="control-label"></label>
+            <input asp-for="Data" class="form-control" />
+            <span asp-validation-for="Data" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="ProdutoId" class="control-label"></label>
+            <select asp-for="ProdutoId" class="form-control" asp-items="ViewBag.ProdutoId"></select>
+            <span asp-validation-for="ProdutoId" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="VendedorId" class="control-label"></label>
+            <select asp-for="VendedorId" class="form-control" asp-items="ViewBag.VendedorId"></select>
+            <span asp-validation-for="VendedorId" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="DepartamentoId" class="control-label"></label>
+            <select asp-for="DepartamentoId" class="form-control" asp-items="ViewBag.DepartamentoId"></select>
+            <span asp-validation-for="DepartamentoId" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Status" class="control-label"></label>
+            <select asp-for="Status" class="form-control" asp-items="ViewBag.Status"></select>
+            <span asp-validation-for="Status" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Salvar" class="btn btn-primary" />
+        </div>
+        <div>
+            <a asp-action="Index" class="btn btn-primary">Voltar</a>
+        </div>
+    </form>
+</div>
